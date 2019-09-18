@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/><!--Linking the stylesheet which you will use to change the page background colours as instructed-->
+    </head>
+    <body>
+        <h1>ADD NEW TASK</h1> <!--The body heading which appears as the top of the page-->
+        <form action="/newtask" method="POST">
+            <!--The method is post because you are submitting the form and the action means the response and everything must happen on this page-->
+            <table>
+                <tr>
+                    <!--Remember that tr means table row and td is for table columns, so this is the table that you enter all the values into as you will see -->
+                    <td>Task Name</td>
+                    <td><input type="text" name="taskName" id="taskName" placeholder="enter name" /></td>
+                </tr>
+                <tr>
+                    <td>Assign To</td>
+                    <td><input type="text" name="assignTo" id="assignTo" placeholder="enter name of person" /></td>
+                </tr>
+                <tr>
+                    <td>Task Due</td>
+                    <td><input type="date" name="taskDue" id="taskDue" placeholder="due date" /></td>
+                </tr>
+                <tr>
+                    <td>Task Status</td>
+                    <td><input type="text" name="taskStatus" id="taskStatus" placeholder="enter Status" /></td>
+                </tr>
+                <tr>
+                    <td>Task Desc</td>
+                    <td><input type="text" name="taskDesc" id="taskDesc" placeholder="enter description" /></td>
+                </tr>
+            </table>
+            <br />
+            <input type="submit" name="submit" value="SUBMIT" /><!--This is then the submit button underneath the form so you can submit the values to be stored in the database. The actual storage is handled in the server page-->
+        </form>
+        <br />
+        <table>
+            <tr>
+                <!--This is then the table of links that lead you to all the other pages-->
+                <td><a href="http://localhost:8080/">Home</a></td>
+                <td><a href="http://localhost:8080/newtask">Add-Task</a></td>
+                <td><a href="http://localhost:8080/listtask">List-All-Tasks</a></td>
+                <td><a href="http://localhost:8080/update">Update</a></td>
+                <td><a href="http://localhost:8080/deleteTask">Delete-One</a></td>
+                <td><a href="http://localhost:8080/deleteAll">Delete-All-Tasks</a></td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <h1>ADD NEW DEVELOPER</h1>
+        <form action="/newDeveloper" method="POST">
+            <table>
+                <tr>
+                    <td>Developer Firstname</td>
+                    <td><input type="text" name="firstName" id="firstName" placeholder="enter Firstname"/></td>
+                </tr>
+                <tr>
+                    <td>Developer Lastname</td>
+                    <td><input type="text" name="lastName" id="lastName" placeholder="enter Lastname of person"/></td>
+                </tr>
+                <tr>
+                    <td>Level</td>
+                    <td><input type="text" name="level" id="level" placeholder="enter level"/></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td><input type="text" name="state" id="state" placeholder="enter state"/></td>
+                </tr>
+                <tr>
+                    <td>Suburb</td>
+                    <td><input type="text" name="suburb" id="suburb" placeholder="enter suburb"/></td>
+                </tr>
+                <tr>
+                    <td>Street</td>
+                    <td><input type="text" name="street" id="street" placeholder="enter street"/></td>
+                </tr>
+                <tr>
+                    <td>Unit</td>
+                    <td><input type="text" name="unit" id="unit" placeholder="enter unit"/></td>
+                </tr>
+            </table>
+            <br/>
+            <input type="submit" name="submit" value="SUBMIT"/>
+        </form>
+        <br/>
+        <table>
+            <tr>
+                <td><a href="http://localhost:8080/">Home</a></td>
+                <td><a href="http://localhost:8080/newtask">Add-Task</a></td>
+                <td><a href="http://localhost:8080/listtask">List-All-Tasks</a></td>
+                <td><a href="http://localhost:8080/update">Update</a></td>
+                <td><a href="http://localhost:8080/deleteTask">Delete-One</a></td>
+                <td><a href="http://localhost:8080/deleteAll">Delete-All-Tasks</a></td>
+                <td><a href="http://localhost:8080/newDeveloper">Add-Developer</a></td>
+                <td><a href="http://localhost:8080/listDeveloper">List-All-Developers</a></td>
+            </tr>
+        </table>
+    </body>
+</html>

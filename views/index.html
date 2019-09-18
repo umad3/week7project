@@ -1,0 +1,23 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" /><!--Linking the stylesheet-->
+</head>
+    <body>
+        <img src="sci_fi_web_by_emilwidlund-d5ti5if.jpg" /> <!--This is where you will set your logo image, which in this case is saved in the same folder as this file. If not then you will have to specify a path-->
+        <h1>Welcome __ <%= username%></h1> <!--As explained in the server page, this username is being pulled from there. The <%= username%> shows that the username variable is now expected to take that place when the document is rendered-->
+        <br />
+        <br />
+
+        <table>
+            <!--The table of links to navigate to the other pages-->
+            <tr>
+                <td><a href="http://localhost:8080/">Home</a></td>
+                <td><a href="http://localhost:8080/newtask">Add-Task</a></td>
+                <td><a href="http://localhost:8080/listtask">List-All-Tasks</a></td>
+                <td><a href="http://localhost:8080/update">Update</a></td>
+                <td><a href="http://localhost:8080/deleteTask">Delete-One</a></td>
+                <td><a href="http://localhost:8080/deleteAll">Delete-All-Tasks</a></td>
+            </tr>
+        </table>
+    </body>
+</html>

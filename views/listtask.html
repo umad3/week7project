@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <h1>THE TASKLIST PAGE</h1>
+        <br/>
+        <h3>
+            The available tasks are:
+            <table>
+                <tr> <!--tr stands for table row, so all of the stuff below falls within one row-->
+                    <td>ID -</td> <!--td then stands for the respective columns that everything falls into-->
+                    <td>Name - </td>
+                    <td>Assign To - </td>
+                    <td>Due Date - </td>
+                    <td>Status - </td>
+                    <td>Description</td>
+                </tr>
+                <%for(let x = 0; x < db.length; x++){%> <!--This loops through the task table in order to find any tasks from the database that should be displayed here-->
+                <tr>
+                    <td><%= db[x]._id %> </td> <!--All the respective values are pulled from the variables and displayed when the page is rendered-->
+                    <td><%= db[x].name %> </td><!--As you can see, these values correspond to the above columns, so they are pulled from the database, stored into their variables, and then displayed in those columns. The variables themselves are in the server.js page-->
+                    <td><%= db[x].assign_To %> </td>
+                    <td><%= db[x].due_Date %></td>
+                    <td><%= db[x].status %> </td>
+                    <td><%= db[x].description %></td>
+                </tr>
+                <%}%><!--This then ends the for loop started above to get all the respective values-->
+            </table>
+        </h3>
+        <br/>
+        <table>
+            <tr><!--This is the row of links to the other pages-->
+                <td><a href="http://localhost:8080/">Home</a></td>
+                <td><a href="http://localhost:8080/newtask">Add-Task</a></td>
+                <td><a href="http://localhost:8080/listtask">List-All-Tasks</a></td>
+                <td><a href="http://localhost:8080/update">Update</a></td>
+                <td><a href="http://localhost:8080/deleteTask">Delete-One</a></td>
+                <td><a href="http://localhost:8080/deleteAll">Delete-All-Tasks</a></td>
+            </tr>
+        </table>
+    </body>
+</html>

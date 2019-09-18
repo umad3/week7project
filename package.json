@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-web-app11",
+  "version": "0.0.0",
+  "description": "NodejsWebApp11",
+  "main": "server.js",
+  "author": {
+    "name": "Mthokozisi"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.1"
+  }
+}

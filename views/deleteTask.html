@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <h1>DELETE TASK</h1>
+        <form action="/deleteTask" method="POST">
+            <table>
+                <tr>
+                    <td>Task ID</td>
+                    <td><input type="text" name="taskID" id="taskID" placeholder="enter "/></td>
+                </tr>
+            </table>
+            <br/>
+            <input type="submit" name="submit" value="DELETE"/>
+        </form>
+        <br/>
+        <table>
+            <tr>
+                <td><a href="http://localhost:8080/">Home</a></td>
+                <td><a href="http://localhost:8080/newtask">Add-Task</a></td>
+                <td><a href="http://localhost:8080/listtask">List-All-Tasks</a></td>
+                <td><a href="http://localhost:8080/update">Update</a></td>
+                <td><a href="http://localhost:8080/deleteTask">Delete-One</a></td>
+                <td><a href="http://localhost:8080/deleteAll">Delete-All-Tasks</a></td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+body { /*This is where I set the background colour, which as you can see in my case is yellow. I also set the dimensions for the logo image and the padding for all the tables used*/
+    background-color: yellow; 
+}
+img{/*Since I didn't use a specific ID then any image that appears on any page will have these same dimensions*/
+    height: 150px;
+    width: 300px;
+}
+td{
+    padding-right: 20px;
+}

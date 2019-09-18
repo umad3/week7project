@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <h1>ALL THE DEVELOPERS</h1>
+        <br/>
+        <h3>
+            The available cars are:
+            <table>
+                <!--This is the table where all the developers are listed. This data is pulled from the database when rendered-->
+                <tr>
+                    <td>ID -</td>
+                    <td>First name - </td>
+                    <td>Last name - </td>
+                    <td>Level - </td>
+                    <td>State - </td>
+                    <td>Suburb</td>
+                    <td>Street - </td>
+                    <td>Unit</td>
+                </tr>
+                <%for(let x = 0; x < db.length; x++){%> <!--Looping through the database to find all the developers and then list them if any are found-->
+                <tr>
+                    <td><%= db[x]._id %> </td> <!--Each respective value is pulled from the variable and then displayed here when the page is rendered. The ID, name, etc are pulled and displayed in this tabular format-->
+                    <td><%= db[x].name.firstName%> </td>
+                    <td><%= db[x].name.lastName %> </td>
+                    <td><%= db[x].level %></td>
+                    <td><%= db[x].address.state %> </td>
+                    <td><%= db[x].address.suburb %> </td>
+                    <td><%= db[x].address.street %> </td>
+                    <td><%= db[x].address.unit %> </td>
+                </tr>
+                <%}%>
+            </table>
+        </h3>
+        <br/>
+        <table>
+            <tr>
+                <td><a href="http://localhost:8080/">Home</a></td>
+                <td><a href="http://localhost:8080/newtask">Add-Task</a></td>
+                <td><a href="http://localhost:8080/listtask">List-All-Tasks</a></td>
+                <td><a href="http://localhost:8080/update">Update</a></td>
+                <td><a href="http://localhost:8080/deleteTask">Delete-One</a></td>
+                <td><a href="http://localhost:8080/deleteAll">Delete-All-Tasks</a></td>
+                <td><a href="http://localhost:8080/newDeveloper">Add-Developer</a></td>
+                <td><a href="http://localhost:8080/listDeveloper">List-All-Developers</a></td>
+            </tr>
+        </table>
+    </body>
+</html>
